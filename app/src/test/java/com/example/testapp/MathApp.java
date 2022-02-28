@@ -16,8 +16,59 @@ public class MathApp {
     }
 
     @Test
-    public void addTest() {
-        assertEquals(12, math.add("7", "5"));
+    public void SimpleAddTest() {
+        assertEquals("17", math.add("12", "5"));
+    }
+
+    @Test
+    public void simpleDivideTest() {
+        assertEquals("1", math.divide("2", "2"));
+    }
+
+    @Test
+    public void simpleMultiplyTest() {
+        assertEquals("49", math.multiply("7", "7"));
+    }
+
+    @Test
+    public void simpleSubtractionTest() {
+        assertEquals("70", math.subtract("80", "10"));
+    }
+
+    @Test
+    public void addIncludingSpacesTestCase() {
+        assertEquals("17", math.add("      12", "                        5"));
+    }
+
+    @Test
+    public void addWithSpacesTestCase() {
+        assertEquals("17", math.add("  12  ", "  5  "));
+    }
+
+    @Test
+    public void addWithMinusTestCase() {
+        assertEquals("Ошибка обнаружили отрицательное число", math.add("-3", "3"));
+
+    }
+
+    @Test
+    public void simpleDivideWithZeroTest() {
+        assertEquals("2", math.divide("0", "2"));
+    }
+
+    @Test
+    public void addWithSymbols() {
+        assertEquals("Символы вводить нельзя удод","2a","2");
+    }
+
+    @Test
+    public void doesIncludeSpecialCharacters() {
+        assertEquals("Ошибка, обнаружены символы", math.areSymbolsIncluded("#@#@!#@!7416", "381"));
+    }
+
+    @Test
+    public void isDividedByZero() {
+        assertEquals("Число 2 не может быть разделено на ноль", math.dividedByZero("2", "0"));
     }
 
     @After
