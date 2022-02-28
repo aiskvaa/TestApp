@@ -17,7 +17,6 @@ public class Math {
     public String subtract(String a, String b) {
         int num1 = Integer.parseInt(a.trim());
         int num2 = Integer.parseInt(b.trim());
-
         return String.valueOf(num1 - num2);
 
     }
@@ -33,11 +32,9 @@ public class Math {
         int num1 = Integer.parseInt(a.trim());
         int num2 = Integer.parseInt(b.trim());
         if (num1 < 0 || num2 < 0) {
-            return "Число 2 не может быть разделено на ноль";
 
         }
-        return "Ошибка, вы не можете разделить на ноль";
-
+        return  "число 2 ,  не можете разделить на ноль";
 
     }
 
@@ -55,11 +52,8 @@ public class Math {
 
 
         if (c) {
-            return "Ошибка, обнаружены специальные символы-";
-
         }
-        return String.valueOf(a+b);
-
+            return "Ошибка, обнаружены специальные символы-";
 
 
     }

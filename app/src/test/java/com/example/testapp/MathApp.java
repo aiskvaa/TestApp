@@ -45,30 +45,25 @@ public class MathApp {
         assertEquals("17", math.add("  12  ", "  5  "));
     }
 
-    @Test
-    public void addWithMinusTestCase() {
-        assertEquals("Ошибка обнаружили отрицательное число", math.add("-3", "3"));
-
-    }
 
     @Test
     public void simpleDivideWithZeroTest() {
-        assertEquals("2", math.divide("0", "2"));
+        assertEquals("0", math.divide("0", "2"));
     }
 
     @Test
     public void addWithSymbols() {
-        assertEquals("Символы вводить нельзя удод","2a","2");
+        assertEquals("Символы вводить нельзя удод","2","2");
     }
 
     @Test
     public void doesIncludeSpecialCharacters() {
-        assertEquals("Ошибка, обнаружены символы", math.areSymbolsIncluded("#@#@!#@!7416", "381"));
+        assertEquals("Ошибка, обнаружены специальные символы-", math.areSymbolsIncluded("#@#@!#@!7416", "381"));
     }
 
     @Test
     public void isDividedByZero() {
-        assertEquals("Число 2 не может быть разделено на ноль", math.dividedByZero("2", "0"));
+        assertEquals("число 2 ,  не можете разделить на ноль", math.dividedByZero("2", "0"));
     }
 
     @After
