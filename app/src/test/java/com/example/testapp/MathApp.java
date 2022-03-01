@@ -25,10 +25,12 @@ public class MathApp {
     }
 
     @Test
-
     public void simpleMultiplyTest() {
-        assertEquals("25", math.divide("5", "5"));
+        assertEquals("49", math.multiply("7", "7"));
     }
+
+
+
 
     @Test
     public void simpleSubtractionTest() {
