@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Math math = new Math();
+
                 String num1 = binding.firstFieldEd.getText().toString();
                 String num2 = binding.secondFieldEd.getText().toString();
                 String result = math.add(num1, num2);
